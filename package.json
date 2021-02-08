@@ -7,7 +7,8 @@
     "lint": "run-s eslint prettier",
     "eslint": "eslint --ext .js,.jsx,.ts,.tsx,.vue",
     "prettier": "prettier -l \"./**/*\"",
-    "prettier:fix": "prettier --write -l \"./**/*\""
+    "prettier:fix": "prettier --write -l \"./**/*\"",
+    "prepublishOnly": "node release.js"
   },
   "files": [
     "*.js"
@@ -46,7 +47,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged -p false",
+      "pre-commit": "lint-staged -p false && npm run prepublishOnly",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },

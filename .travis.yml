@@ -20,8 +20,12 @@ deploy:
     secure: uPd3VFTaMCMoTMxMGLa8TfSm4nJNP8s/w8Ik2ahtgS//7UfYFGjkljfYZF94Ay1bZ43KqTfnxfwD5AYASDcqU52P4u23x3A4qe+OjA05S8h0Vp5uTG5e86TGvgN0e4PsyOuS81c4bmLZyGiIqgUWeCh6DO3RwY+Dx1YQZrXklqnLl1vLfjGA1QAMGEtlbf6CX9zKKA/BaUDYImiCzKqlna9ZJ4y18KnZp2M9NePUnGxW0iC2STqd0seqbQpVrFKHGYhtjYZDwI290UTADxkNsy7JC9p+q2iOKW7BrXnAQ04VnpjC17aqv2Yox1JvWEgfbgrsQRTsbutF8aenF52EwoZ6ZvKOzpelKGt2j3xBfD1x1V1ZdMh5SxEjwribHwkwEpUnkJdseohK+mEEodXFJVko4lH96EQJIq/TJKCzZ5rj9eKiOvWtG+h9CBtnuKU31T5KNVd4rLqbdSeV7kY3JFjAHu0/3V3feEJwN+7jYThdsFHiakSUNs3OMLdhI69q1atulevCDq+xEW8yw1GIDtjLzFqORVgseT7YzU9SefmPBC705w0wLtxE7d3CeDAPKCjjMEFYzDMVhyPmvP2V7/TAYl5ygqhUozlp1qT7s0ATB4MvcF+9D1Wy6IL8SMD+0HUjiC8izJ+5KWDl7s9VMsMW/mp3jxjwnLq/+O1b+jI=
   on:
     tags: true
+    branch: master
     repo: TheFirstSunday/eslint-config-sunday
   skip_cleanup: 'true'
+  tag: latest
+  condition: '$TRAVIS_TAG =~ ^v[0-9]+.[0-9]+.[0-9]+$'
+
 # keep the npm cache around to speed up installs
 cache:
     directories:
