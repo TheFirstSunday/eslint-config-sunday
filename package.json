@@ -1,0 +1,86 @@
+{
+  "name": "eslint-config-sunday",
+  "version": "1.0.6",
+  "description": "an eslint rule applies to React、Vue3.0、ReactNative、TS.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "run-s eslint prettier",
+    "eslint": "eslint --ext .js,.jsx,.ts,.tsx,.vue",
+    "prettier": "prettier -l \"./**/*\"",
+    "prettier:fix": "prettier --write -l \"./**/*\"",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheFirstSunday/eslint-config-sunday.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintrc",
+    "eslintconfig",
+    "config",
+    "reactnative",
+    "javascript",
+    "styleguide",
+    "react",
+    "vue",
+    "typescript",
+    "standardjs",
+    "prettier",
+    "lint",
+    "ecmascript"
+  ],
+  "author": "sunday <2621949203@qq.com>",
+  "contributors": [
+    "sunday <2621949203@qq.com>"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheFirstSunday/eslint-config-sunday/issues"
+  },
+  "homepage": "https://github.com/TheFirstSunday/eslint-config-sunday#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged -p false",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@types/prettier": "^2.1.6",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
+    "babel-eslint": "^10.1.0",
+    "conventional-changelog-cli": "^2.1.1",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-vue": "^7.5.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3",
+    "vue-eslint-parser": "^7.4.1"
+  },
+  "engines": {
+    "node": ">= 12.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "lint-staged": {
+    "*.{js, jsx, ts, tsx, vue}": [
+      "eslint --ext .js,.jsx,.ts,.tsx,.vue --fix"
+    ],
+    "*.{css,scss,less,html}": [
+      "prettier --write",
+      "stylelint --fix"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  }
+}
