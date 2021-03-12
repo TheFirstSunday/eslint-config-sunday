@@ -1,5 +1,5 @@
 module.exports = {
-    plugins: ['react'],
+    plugins: ['react', 'react-hooks'],
     rules: {
       /**
        * 布尔值类型的 propTypes 的 name 必须为 is 或 has 开头
@@ -320,4 +320,3 @@ module.exports = {
       'react/void-dom-elements-no-children': 'error',
     },
   };
-  
