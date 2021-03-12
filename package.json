@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sunday",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "an eslint rule applies to React、Vue3.0、ReactNative、TS.",
   "main": "index.js",
   "scripts": {
