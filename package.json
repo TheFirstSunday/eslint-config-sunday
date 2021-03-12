@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sunday",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "an eslint rule applies to React、Vue3.0、ReactNative、TS.",
   "main": "index.js",
   "scripts": {
@@ -50,15 +50,6 @@
       "pre-commit": "lint-staged -p false && npm run prepublishOnly",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "@typescript-eslint/eslint-plugin": "^4.14.2",
-    "@typescript-eslint/parser": "^4.14.2",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-vue": "^7.5.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
